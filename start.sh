@@ -4,32 +4,13 @@ set -e
 cd "$(dirname "$0")"
 
 echo "========================================="
-echo "   Starting Boids Simulation Setup...    "
+echo "   Starting Boids Simulation...    "
 echo "========================================="
 
-if ! command -v python3 &> /dev/null; then
-    echo "Error: Python 3 is not installed or not in your PATH."
-    exit 1
-fi
-
-if [ ! -d "venv" ]; then
-    echo "Virtual environment does not exist, creating now..."
-    python3 -m venv venv
-fi
-
-echo "[1/3] Activating virtual environment..."
+echo "[1/2] Activating virtual environment..."
 source venv/bin/activate
 
-if [ -f "requirements.txt" ]; then
-    echo "[2/3] Installing/updating dependencies from requirements.txt..."
-    ./venv/bin/pip install --upgrade pip
-    ./venv/bin/pip install -r requirements.txt
-else
-    echo "Error: requirements.txt not found."
-    exit 1
-fi
-
-echo "[3/3] Launching Boids simulation..."
+echo "[2/2] Launching Boids simulation..."
 echo "========================================="
 python3 boids.py
 
