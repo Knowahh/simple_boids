@@ -12,6 +12,6 @@ source .venv/bin/activate
 
 echo "[2/2] Launching Boids simulation..."
 echo "========================================="
-python3 boids.py
+python3 main.py
 
 deactivate
