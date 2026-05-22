@@ -3,15 +3,7 @@ import numpy as np
 import random
 import sys
 
-WIDTH, HEIGHT = 1000, 700
-NUM_BOIDS = 50
-BOID_COLOR = (200, 230, 255)
-BG_COLOR = (20, 24, 35)
-
-MAX_SPEED = 4.0
-MAX_FORCE = 0.1
-PERCEPTION_RADIUS = 50.0
-SEPARATION_DISTANCE = 25.0
+from constants import WIDTH, HEIGHT, NUM_BOIDS, BG_COLOR, BOID_COLOR, MAX_SPEED, MAX_FORCE, SEPARATION_DISTANCE, PERCEPTION_RADIUS 
 
 class Boid:
     def __init__(self, x, y):
